@@ -1,10 +1,11 @@
 # Introducción a la Ingeniería de Datos y Diseño de Base de Datos
 Repositorio para el curso de Introducción a Ingeniería  de Datos y Diseño de Base de datos con Python, MySQL y Talend, UNAH 2023
 
-![](images/banner.png)
+![](images/banner-v4.png)
 
 ## Descripción y temas del curso
-[Calendarización, temas y fechas](https://docs.google.com/document/d/1hbzA3O-XUNQovL9NQCxYBhVdgIgIh3vo/edit?usp=sharing&ouid=102630350184790418666&rtpof=true&sd=true)
+[Calendarización, temas y fechas](https://cutt.ly/qwwQ24Df)  
+[Formulario de inscripción](https://cutt.ly/FwwI7Jrf)
 
 ## Objetivos
 ### Generales
