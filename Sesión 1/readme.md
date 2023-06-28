@@ -6,8 +6,8 @@
     - [Ubuntu 22.04 LTS](#ubuntu-2204-lts)
     - [Shell de linux y algunos comandos](#shell-de-linux-y-algunos-comandos)
   - [Configuración de Python](#configuración-de-python)
-    - [Entornos virtuales utilizando venv](#entornos-virtuales-utilizando-venv)
     - [Manejador de paquetes PIP](#manejador-de-paquetes-pip)
+    - [Entornos virtuales utilizando venv](#entornos-virtuales-utilizando-venv)
     - [Configurando nuestro entorno](#configurando-nuestro-entorno)
   - [Instalación y configuración de MySQL](#instalación-y-configuración-de-mysql)
   - [Instalación de MySQL Workbench](#instalación-de-mysql-workbench)
@@ -24,6 +24,11 @@
 - Windows Features
   - Habilitar `Virtual Machine platform`
   - Habilitar `Windows Subsystem for linux`
+
+*Ejecutar en Powershell*
+```shell
+ES OTRA COSA BUSCAR EN LA PAGINA DE MICROSOFT 'MANUAL INSTKALLATION STEPS OLDER VERSIONS OF WSL'
+```
 
 ### Terminal de Windows 
 
@@ -54,26 +59,36 @@
 ## Configuración de Python
 <br>
 
-### Entornos virtuales utilizando venv
-<br>
-
-**Crear un entorno virtual de python**
-```python3
-python3 -m venv nombre_entorno
-```
-  
-**Activar entorno virtual**
-```pyhon3
-source nombre_entorno/bin/activate
-```
-<br>
-
 ### Manejador de paquetes PIP
 <br>
 
 **Verificar la versión del manejador de paquetes**
 ```bash
+sudo apt update
+sudo apt upgrade
+
+sudo apt install python3-pip
+```
+<br>
+
+
+**Verificar la versión del manejador de paquetes**
+```bash
 pip -V
+```
+<br>
+
+### Entornos virtuales utilizando venv
+<br>
+
+**Crear un entorno virtual de python**
+```python3
+python3.10.6 -m venv nombre_entorno
+```
+  
+**Activar entorno virtual**
+```pyhon3
+source nombre_entorno/bin/activate
 ```
 <br>
 
@@ -86,11 +101,15 @@ pip install pandas
 ```
 [Página oficial de pandas](https://pandas.pydata.org/)
 
+<br>
+
 **Instalando Numpy**
 ```shell
 pip install numpy
 ```
 [Página oficial de Numpy](https://numpy.org/install/)
+
+<br>
 
 **Instalando Jupyter notebook**
 ```shell
@@ -98,11 +117,29 @@ pip install notebook
 ```
 [Página oficial de Colab](https://jupyter.org/install)
 
+<br>
+
 **Instalando el conector de mysql**
 ```shell
 pip install mysql-connector-python
 ```
 [Página oficial de MySQL](https://dev.mysql.com/doc/connector-python/en/connector-python-installation-binary.html)
+
+<br>
+
+**Instalando PySpark**
+```shell
+pip install pyspark
+```
+[Página oficial de PySpark](https://spark.apache.org/docs/latest/api/python/)
+
+<br>
+
+**Instalando requests**
+```shell
+pip install requests
+```
+[Página oficial de requests](https://pypi.org/project/requests/)
 
 <br>
 
@@ -144,11 +181,12 @@ sudo mysql_secure_installation
 
 **Entrando al servidor de MySQL**
 ```shell
-sudo mysql -u username -p password
+$ sudo mysql -u username -p password
 
 #Cambiamos el modo de autenticación para el usuario root
-sudo mysql -u root -p
+$ sudo mysql -u root -p
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH auth_socket;
+exit;
 ```
 
 <br>
@@ -157,6 +195,16 @@ mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH auth_socket;
 
 [Instalación de librería necesaria | C++](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 [Enlace](https://dev.mysql.com/downloads/workbench/)
+
+
+### Creando un nuevo usuario para conexiones remotas 
+```shell
+$ sudo mysql -u username -p password
+mysql> CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin';
+mysql> GRANT ALL PRIVILEGES *.* TO 'admin'@'localhost' WITH GRANT OPTION; 
+mysql> FLUSH PRIVILEGES;
+mysql> exit; 
+```
 
 <br>
 
