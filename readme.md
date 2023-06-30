@@ -4,7 +4,7 @@ Repositorio para el curso de Introducción a Ingeniería  de Datos y Diseño de 
 ![](images/banner-v4.png)
 
 ## Descripción y temas del curso
-[Calendarización, temas y fechas](https://cutt.ly/qwwQ24Df)  
+[Calendarización, temas y fechas](https://drive.google.com/drive/folders/1Syx6kuwxN8zweRDJO7-ZCObzmwjgANMN?usp=sharing)  
 [Formulario de inscripción](https://cutt.ly/FwwI7Jrf)
 
 ## Objetivos
